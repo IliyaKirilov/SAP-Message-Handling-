@@ -1,0 +1,23 @@
+<mvc:View controllerName="kpmg.home.Pets.controller.PetsView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<List headerText="Pets" items="{ path: 'Pets>/PetsSet' }">
+							<StandardListItem title="{Pets>Name}" description="{Pets>Breed}"/>
+						</List>
+					</content>
+	
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button icon="sap-icon://alert" visible="{=${message>/}.length > 0}" type="Emphasized"
+							press="onMessagePopoverPress"></Button>
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
